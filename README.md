@@ -3,8 +3,8 @@
 4명의 안드로이드 개발자가 코딩컨벤션을 맞추어 나가는 중이다.
 
 ## Check List
-[Typedef](#Typedef)
-[Android Lint 검사](#Android Lint 검사)
+* [Typedef](#Typedef)
+* [Android Lint 검사](#Android Lint 검사)
 
 ### PR 탭의 Filter 기능을 이용해서 본인의 PR만 Search 할 수 있다.
 
