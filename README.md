@@ -4,7 +4,6 @@
 
 ## Check List
 * [Typedef](#typedef)
-* [Android Lint](#androidlint)
 * [Api 응답 Entity 또는 ViewModel에서 문자와 상수의 열거형 데이터가 존재한다면 TypeDef를 사용하여 다루자.](#entity-viewmodel-typedef)
 * [api 응답 노드의 key , value 값의 형태와 이름이 적절한지 확인](#api-응답-노드의-key-,-value-값의-형태와-이름이-적절한지-확인)
 * [api 응답 공통 모델 사용](#api-응답-공통-모델-사용)
@@ -21,7 +20,7 @@
 * [api 응답 Entity 주석](#api-응답-entity-주석)
 * [MVP,MVPI 구조](#mvp,mvpi-구조)
 * [주석과 Android Anotation](#주석과-android-anotation)
-* [androidlint](#androidlint)
+* [Android Lint](#androidlint)
 
 ### PR 탭의 Filter 기능을 이용해서 본인의 PR만 Search 할 수 있다.
 
