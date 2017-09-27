@@ -3,8 +3,25 @@
 4명의 안드로이드 개발자가 코딩컨벤션을 맞추어 나가는 중이다.
 
 ## Check List
-* [Typedef](###Typedef)
-* [Android Lint 검사](#AndroidLint)
+* [Typedef](#typedef)
+* [Android Lint](#androidlint)
+* [Api 응답 Entity 또는 ViewModel에서 문자와 상수의 열거형 데이터가 존재한다면 TypeDef를 사용하여 다루자.](#entity-viewmodel-typedef)
+* [api 응답 노드의 key , value 값의 형태와 이름이 적절한지 확인](#api-응답-노드의-key-,-value-값의-형태와-이름이-적절한지-확인)
+* [api 응답 공통 모델 사용](#api-응답-공통-모델-사용)
+* [api는 응답에서 SerializedName 는 필요할 경우에만 사용.](#api는-응답에서-serializedname-는-필요할-경우에만-사용.)
+* [api 응답 Entity의 모델은 getter만 가진다 Retrofit이 값을 자동으로 바인딩 해주니 setter는 필요없다.](#api-응답-entity의-모델은-getter만-가진다-retrofit이-값을-자동으로-바인딩-해주니-setter는-필요없다.)
+* [getString() 사용주의! String id를 사용할 수 있다면 그대로 써라!](#getstring-사용주의!-string-id를-사용할-수-있다면-그대로-써라!)
+* [Resource id for the format string](#resource-id-for-the-format-string)
+* [별도로 value 에 대한 처리가 없다면 바로 사용하자!](#별도로-value-에-대한-처리가-없다면-바로-사용하자!)
+* [Null이거나 기본값이 필요할 경우 기존 사용법을 찾아보거나 기본값이 무엇이어야 하는지 의문을 가져야한다.](#null이거나-기본값이-필요할-경우-기존-사용법을-찾아보거나-기본값이-무엇이어야-하는지-의문을-가져야한다.)
+* [VMBuilder 에서 View에 사용될 값을 만들지 말자](#vmbuilder-에서-view에-사용될-값을-만들지-말자)
+* [추가된 (또는 리펙토링된) 클래스나 메서드의 범위를 체크하고 접근제한자를 사용한다.](#추가된-또는-리펙토링된-클래스나-메서드의-범위를-체크하고-접근제한자를-사용한다.)
+* [나 또는 다른 사람의 추가작업이 남았다면 TODO를 활용하자](#나-또는-다른-사람의-추가작업이-남았다면-todo를-활용하자)
+* [메시지는 친절하게 (주석,커밋,PR 메시지 등…)](#메시지는-친절하게-주석,커밋,pr-메시지-등...)
+* [api 응답 Entity 주석](#api-응답-entity-주석)
+* [MVP,MVPI 구조](#mvp,mvpi-구조)
+* [주석과 Android Anotation](#주석과-android-anotation)
+* [androidlint](#androidlint)
 
 ### PR 탭의 Filter 기능을 이용해서 본인의 PR만 Search 할 수 있다.
 
@@ -28,7 +45,8 @@ Android는 TypeDef 주석 이있는 주석 라이브러리를 제공합니다 .
 int의 사이즈와 성능의 이점을 그대로 쓸 수 있게 됩니다.
 팁! 그전에는 꼭 필요할 경우에만 Enum을 사용했는데 그래도 Enum이 남아 있어서 코드에 대한 최적화가 고민이 된다면?
 코드가 잘 짜여졌다면 프로가드에서 열거형 타입을 int형에 최적화 해줍니다. (공짜로 최적화 해줌!)
-### Api 응답 Entity 또는 ViewModel에서 문자와 상수의 열거형 데이터가 존재한다면  TypeDef를 사용하여 다루자.
+
+### Entity viewmodel Typedef
 우리는 Enum을 쓰면 안되므로 TypeDef를 사용하여 상수 들을 표현한다.
 정수 또는 문자열 상수를 TypeDef로 정의하기 전에 중복되는 정의가 다른 곳에 선언 되어있는지 확인하고
 있다면 그것을 사용한다.
@@ -47,7 +65,7 @@ code, message 만 있는 경우는 com.yanolja.api.response.Result 와 같은 �
 
 ### api 응답 Entity의 모델은 getter만 가진다 Retrofit이 값을 자동으로 바인딩 해주니 setter는 필요없다.
 
-### getString() 사용주의! String id를 사용할 수 있다면 그대로 써라!
+### getString 사용주의! String id를 사용할 수 있다면 그대로 써라!
 
 ### Resource id for the format string
 getString 내부에 String.format이 지원된다.
@@ -65,11 +83,11 @@ message = getContext().getString(R.string.share_place_coupon_description, placeD
 Entity의 내용을 대부분 ViewModel로 그대로 바인딩하고 (열거형 타입이 필요하다면 convert 할 필요는 있음)
 View에 노출될 값을 조합해야 한다면 View에서 ViewModel의 값을 get하여 조합하자.
 
-### 추가된 (또는 리펙토링된) 클래스나 메서드의 범위를 체크하고 접근제한자를 사용한다.
+### 추가된 또는 리펙토링된 클래스나 메서드의 범위를 체크하고 접근제한자를 사용한다.
 
-### 나또는 다른 사람의 추가작업이 남았다면 TODO를 활용하자
+### 나 또는 다른 사람의 추가작업이 남았다면 TODO를 활용하자
 
-### 메시지는 친절하게 (주석,커밋,PR 메시지 등...)
+### 메시지는 친절하게 주석,커밋,PR 메시지 등...
 ![](https://i.imgur.com/p8IKEAL.png)
 
 ### api 응답 Entity 주석
@@ -86,9 +104,11 @@ View에 노출될 값을 조합해야 한다면 View에서 ViewModel의 값을 g
 
 1. Commit한 내역에 Diff를 해서 변경 내역을 보면서 주석 여부를 체크!
 2. 메서드 파라미터,반환 값에  NonNull,Nullable annotation 있는지 확인
-   변경 코드에서 infer Nullity를 실행하여 Null 주석을 자동으로 추가 그리고 변경 점을 한번 체크! 
-   
-### AndroidLint
+   변경 코드에서 infer Nullity를 실행하여 Null 주석을 자동으로 추가 그리고 변경 점을 한번 체크!
+
+### androidlint
+
+
 - 사용하지 않는 리소스 제거 (리펙토링 중간에 사용하지 않는 String resource,layout xml 등이 생길 수 있다.)
 - 작업한 목록에서 Lint 한번씩 돌리면서 작업 진행하기!
 
