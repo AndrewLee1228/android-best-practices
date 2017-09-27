@@ -3,8 +3,8 @@
 4명의 안드로이드 개발자가 코딩컨벤션을 맞추어 나가는 중이다.
 
 ## Check List
-* [Typedef](#Typedef)
-* [Android Lint 검사](#Android Lint 검사)
+* [Typedef](###Typedef)
+* [Android Lint 검사](#AndroidLint)
 
 ### PR 탭의 Filter 기능을 이용해서 본인의 PR만 Search 할 수 있다.
 
@@ -88,7 +88,7 @@ View에 노출될 값을 조합해야 한다면 View에서 ViewModel의 값을 g
 2. 메서드 파라미터,반환 값에  NonNull,Nullable annotation 있는지 확인
    변경 코드에서 infer Nullity를 실행하여 Null 주석을 자동으로 추가 그리고 변경 점을 한번 체크! 
    
-### Android Lint 검사
+### AndroidLint
 - 사용하지 않는 리소스 제거 (리펙토링 중간에 사용하지 않는 String resource,layout xml 등이 생길 수 있다.)
 - 작업한 목록에서 Lint 한번씩 돌리면서 작업 진행하기!
 
