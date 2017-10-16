@@ -21,6 +21,7 @@
 * [MVP,MVPI 구조](#mvp,mvpi-구조)
 * [주석과 Android Anotation](#주석과-android-anotation)
 * [Android Lint](#androidlint)
+* [블로그의 포스팅을 신뢰하지 말자!] (#blog) 
 
 ### PR 탭의 Filter 기능을 이용해서 본인의 PR만 Search 할 수 있다.
 
@@ -113,5 +114,9 @@ View에 노출될 값을 조합해야 한다면 View에서 ViewModel의 값을 g
 - 작업한 목록에서 Lint 한번씩 돌리면서 작업 진행하기!
 
 
-
+### blog
+onWindowFocusChanged() 와 같은 자주 사용하지 않는 메서드는 블로그 포스팅을 보며 사용방법을 알 수 있기도 한데
+이럴 경우 내가 원하지 않는 의도로 동작하거나 예외사항을 파악하기 어려워 추후 프로덕트에서 버그를 야기할 수 있다. 그러므로 블로그로 정보를 습득하더라도
+android developer 의 api 설명을 위주로 보는게 좋겠다.
+https://developer.android.com/reference/android/app/Activity.html#onWindowFocusChanged(boolean)
 
