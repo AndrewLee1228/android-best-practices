@@ -120,3 +120,9 @@ onWindowFocusChanged() 와 같은 자주 사용하지 않는 메서드는 블로
 android developer 의 api 설명을 위주로 보는게 좋겠다.
 https://developer.android.com/reference/android/app/Activity.html#onWindowFocusChanged(boolean)
 
+### 지속가능한업무
+update...기간이아닐경우
+
+
+
+
