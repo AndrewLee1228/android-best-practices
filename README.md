@@ -21,7 +21,8 @@
 * [MVP,MVPI 구조](#mvp,mvpi-구조)
 * [주석과 Android Anotation](#주석과-android-anotation)
 * [Android Lint](#androidlint)
-* [블로그의 포스팅을 신뢰하지 말자!] (#blog) 
+* [블로그의 포스팅을 신뢰하지 말자!] (#blog)
+* [Commit 전에 확인사항] (#Commit 전에 확인사항)
 
 ### PR 탭의 Filter 기능을 이용해서 본인의 PR만 Search 할 수 있다.
 
@@ -122,6 +123,11 @@ https://developer.android.com/reference/android/app/Activity.html#onWindowFocusC
 
 ### 지속가능한업무
 update...기간이아닐경우
+
+### Commit 전에 확인사항
+
+- Uncommit 파일 리스트를 선택하여 reformat code (코드스타일에 맞추어 포멧팅 해줌) 하기
+  ![reformat code](https://ws1.sinaimg.cn/large/006tKfTcgy1fkwqi23wi0j31kw0pydle.jpg)
 
 
 
