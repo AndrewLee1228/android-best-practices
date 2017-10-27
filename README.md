@@ -127,8 +127,8 @@ update...기간이아닐경우
 ### Commit 전에 확인사항
 
 - Uncommit 파일 리스트를 선택하여 reformat code (코드스타일에 맞추어 포멧팅 해줌) 하기
-  ![reformat code](https://ws1.sinaimg.cn/large/006tKfTcgy1fkwqi23wi0j31kw0pydle.jpg)
-
+  ![reformat code](https://ws3.sinaimg.cn/large/006tKfTcgy1fkwqn3ksd0j31j40n2td7.jpg)
+  커맨드 + 옵션 + L
 
 
 
