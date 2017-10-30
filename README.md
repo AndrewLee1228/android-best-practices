@@ -134,5 +134,9 @@ update...기간이아닐경우
   ![](https://ws1.sinaimg.cn/large/006tKfTcgy1fkwqp75x92j31kw0qrdly.jpg)
   커맨드 + 옵션 + I
 
+### Presenter,View ,Contract 사용시
+구현체를 넘기는지 확인
+예시 )
+ 
 
 
