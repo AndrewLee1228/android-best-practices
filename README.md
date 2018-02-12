@@ -140,5 +140,12 @@ update...기간이아닐경우
 
 잘된 예시 )
  
+ 
+# 서버의 응답을 받는 모델의 명칭
+As Is "~Response" To Be "~Entity"
+
+# Entity를 ViewEntity로 변환할 경우 ViewEntityBuilder를 쓰지말고 Mapper 를 사용하자
+빌더패턴과 헷갈린다. 그러므로 "~ViewEntityMapper" 를 사용하자 그래서 create() 메서드 대신에 map() 메서드를 사용하자!
+Mapper가 필요 없는 간단한 경우는 순수한 Entity를 그대로 View 전달해서 사용해도 무방하다.
 
 
